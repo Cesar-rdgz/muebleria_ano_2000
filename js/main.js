@@ -25,22 +25,19 @@ function slideLeft () {
     current--;
     animation[current].classList.remove('animateRight');
     animation[current].classList.add('animateLeft');
+    console.log(current);
 }
 
 //internval for the slider
-//setInterval(slideRight, 5000);
+setInterval(emuClick, 8000);
 
 // move to right
 function slideRight() {
     reset();
     sliderCards[current + 1].style.display = 'block';
-    // las animaciones tiene ir en el contenido, y las imagenes dejar de ser background
     current++;
     animation[current].classList.remove('animateLeft');
     animation[current].classList.add('animateRight'); 
-    if(current === animation.length -1){
-        current = -1;
-    }
 }
 
 //click left arrow
@@ -58,5 +55,10 @@ arrowRight.addEventListener('click', function (){
     }
     slideRight();
 });
+
+//emulate click on right arrow
+function emuClick(){
+    arrowRight.click();    
+}
 
 startSlide();

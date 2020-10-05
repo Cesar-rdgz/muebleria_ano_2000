@@ -115,23 +115,23 @@ header .contact-container a:hover {
 
 #carrousel {
     position: relative;
-    top: 65px;
+    top: 64px;
 }
 
 #slider{
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     overflow-x: hidden;
 }
 
 .slide-content {
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     
 }
 
 #slider .slide .container {
-    height: 30vh;
+    height: 40vh;
     width: 100%;
     position:relative;
     top: 0;
@@ -148,9 +148,12 @@ header .contact-container a:hover {
 
 #slider .slide .container span {
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 12%;
-    color: #fff;
+    width: 50%;
+    color: #501B1d;
+    font-size: .6rem;
+    font-weight: bold;
 }
 
 
@@ -512,19 +515,19 @@ footer .footer-info span i {
     }
 
     #slider{
-        height: 50vh;
+        height: 60vh;
         width: 100%;
         overflow-x: hidden;
     }
     
     .slide-content {
-        height: 50vh;
+        height: 60vh;
         width: 100%;
         
     }
     
     #slider .slide .container {
-        height: 50vh;
+        height: 60vh;
         width: 100%;
         position:relative;
         top: 0;
@@ -573,19 +576,19 @@ footer .footer-info span i {
     } 
 
     #slider{
-        height: 60vh;
+        height: 70vh;
         width: 100%;
         overflow-x: hidden;
     }
     
     .slide-content {
-        height: 60vh;
+        height: 70vh;
         width: 100%;
         
     }
     
     #slider .slide .container {
-        height: 60vh;
+        height: 70vh;
         width: 100%;
         position:relative;
         top: 0;
@@ -666,19 +669,19 @@ footer .footer-info span i {
     }
 
     #slider{
-        height: 80vh;
+        height: 90vh;
         width: 100%;
         overflow-x: hidden;
     }
     
     .slide-content {
-        height: 80vh;
+        height: 90vh;
         width: 100%;
         
     }
     
     #slider .slide .container {
-        height: 80vh;
+        height: 90vh;
         width: 100%;
         position:relative;
         top: 0;
@@ -785,5 +788,31 @@ footer .footer-info span i {
         margin: auto;
     }
 } 
+
+@media(min-width:1200px) {
+    #slider{
+        height: 100vh;
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .slide-content {
+        height: 100vh;
+        width: 100%;
+        
+    }
+    
+    #slider .slide .container {
+        height: 100vh;
+        width: 100%;
+        position:relative;
+        top: 0;
+        left: 0;
+    }
+
+    .brands .brands-logo .third {
+        display: block;
+    }
+}
 
 /* --- media query --- */
