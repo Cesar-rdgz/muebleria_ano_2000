@@ -1,5 +1,6 @@
 const staticCacheName = 'site-static';
 const assets = [
+    "/",
     "images/logo-company-muebleria.jpg",
 ];
 
