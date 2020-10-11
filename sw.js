@@ -1,7 +1,6 @@
 const staticCacheName = 'site-static';
 const assets = [
     "/",
-    "images/logo-company-muebleria.jpg",
 ];
 
 // install service worker
