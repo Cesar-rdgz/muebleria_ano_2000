@@ -1,13 +1,6 @@
 const staticCacheName = 'site-static';
 const assets = [
-    "/",
-    "index.html",
-    'js/app.js',
-    "js/main.js",
-    "css/styles.css",
-    "css/all.css",
     "images/logo-company-muebleria.jpg",
-    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 ];
 
 // install service worker
