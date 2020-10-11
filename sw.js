@@ -5,7 +5,7 @@ const assets = [
     "css/all.css",
     "js/app.js",
     "js/main.js",
-    "/",
+    "images/logo-company-muebleria.jpg",
 ];
 
 // install service worker
