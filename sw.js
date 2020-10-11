@@ -1,5 +1,5 @@
 const staticCacheName = 'site-static';
-const assets = [
+/*const assets = [
     "index.html",
     "css/styles.css",
     "css/all.css",
@@ -8,7 +8,7 @@ const assets = [
     "/",
     "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
     "images/logo-company-muebleria.jpg",
-];
+];*/
 
 // install service worker
 self.addEventListener('install', evt => {
@@ -16,7 +16,7 @@ self.addEventListener('install', evt => {
     evt.waitUntil(
         caches.open(staticCacheName).then(cache => {
             console.log('caching shell assets');
-            cache.addAll(assets);
+            cache.addAll("index.html", "css/styles.css", "css/all.css", "js/app.js", "js/main.js", "/", "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css", "images/logo-company-muebleria.jpg",);
         })
     );
 });
