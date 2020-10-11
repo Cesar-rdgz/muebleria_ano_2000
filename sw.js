@@ -5,6 +5,9 @@ const assets = [
     "css/all.css",
     "js/app.js",
     "js/main.js",
+    "/",
+    "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
+    "images/logo-company-muebleria.jpg",
 ];
 
 // install service worker
