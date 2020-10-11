@@ -3,6 +3,7 @@ const assets = [
     "index.html",
     "css/styles.css",
     "css/all.css",
+    "js/app.js",
 ];
 
 // install service worker
