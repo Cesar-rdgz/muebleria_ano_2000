@@ -2,7 +2,7 @@ const staticCacheName = 'site-static';
 const assets = [
     "index.html",
     "css/styles.css",
-    "css/all.css"
+    "css/all.css",
 ];
 
 // install service worker
