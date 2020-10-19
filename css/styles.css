@@ -112,7 +112,7 @@ header .contact-container a:hover {
 
 header .contact-container a .lil-icons{
     margin: 0 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 /* --- contacts line --- */
@@ -250,6 +250,7 @@ header .contact-container a .lil-icons{
 
 
 
+
 /* --- brands --- */
 
 /* --- slider --- */
@@ -365,11 +366,16 @@ header .contact-container a .lil-icons{
     color: var(--main-color);
 }
 
+.products form #btn-search {
+    cursor: pointer;
+}
+
 .products .grid-categories{
     display: flex;
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    overflow: hidden;
 }
 
 .products .grid-categories img{
@@ -398,6 +404,32 @@ header .contact-container a .lil-icons{
 .products .grid-categories .grid-container p:hover{
     background: var(--complementary-color);
     color: #fff;
+}
+
+#search-field {
+    width: 90%;
+}
+
+#search-field label{
+    width: 100%;
+    font-family: sans-serif;
+    font-size: .8rem;
+    color: var(--complementary-color);
+}
+
+#search-field #product{
+    font-family: arial;
+    height: 2rem;
+    width: 55%;
+}
+
+#search-field #btn-search{
+    color: #fff;
+    background-color: var(--complementary-color);
+    border: none;
+    border-radius: 13px;
+    padding: .7rem 1.2rem;
+    margin: 1rem 0;
 }
 
 /* --- products --- */

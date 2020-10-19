@@ -3,6 +3,9 @@ let sliderCards = document.querySelectorAll('.slide-content'),
     arrowRight = document.querySelector('#arrow-right'),
     current = 0
     animation = document.querySelectorAll('#image-ani');
+const categories = document.querySelector('.real-time-content');
+const blankSearch = document.querySelector('.blank-search');
+const noMatch = document.querySelector('.no-match');
 
 
 // hidde everything
@@ -62,3 +65,41 @@ function emuClick(){
 }
 
 startSlide();
+
+
+
+// render products data
+
+const renderProduct = (data, id) => {
+    const html = `
+        <div class="grid-container static-data" data-id"${id}">
+            <img src="${data.image}" alt="">
+            <a id="product" href=""><p>${data.title}</p></a>
+        </div>
+    `;
+    categories.innerHTML += html;
+};
+
+function controlView(number) {
+    for(let i = number - 1; i >= 4; i--){
+        categories.children[i].style.display = 'none';
+    }
+}
+
+function resetProducts(){
+    let oldData = document.querySelectorAll('.static-data');
+    oldData.forEach(item => {
+       item.style.display = 'none';
+    });
+}
+
+const renderSearch = (data) => {
+    const html = `
+        <div class="grid-container static-data">
+            <img class="animateRight" src="${data.image}" alt="">
+            <a id="product" href=""><p class="animateRight">${data.description}</p></a>
+        </div>
+    `;
+
+    categories.innerHTML += html;
+};
