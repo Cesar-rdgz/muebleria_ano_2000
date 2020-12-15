@@ -68,13 +68,74 @@ startSlide();
 
 
 
+// lineas functions
+
+const btnDefault = document.querySelector('.lista-categorias .articulo[category="linea-blanca"]');
+let btnsFilter = document.querySelectorAll('.articulo');
+let products = document.querySelectorAll('.grid-container');
+
+
+btnDefault.classList.add('active');
+btnsFilter.forEach(btn => {
+btn.addEventListener('click', e => {
+    let catProduct = btn.getAttribute('category');
+
+    removeClass();
+    btn.classList.add('active');
+
+    products.forEach(product => {
+    let catItem = product.getAttribute('category');
+    if(catProduct === catItem){
+        product.classList.add('active');
+    }else {
+        product.classList.remove('active');
+        product.classList.add('unactive');
+    }
+    });
+});
+});
+
+function removeClass() {
+btnsFilter.forEach(btn => {
+    btn.classList.remove('active');
+});
+}
+
+function init(){
+const productInit = btnDefault.getAttribute('category');
+products.forEach(product => {
+    const startItem = product.getAttribute('category');
+    if(startItem === productInit){
+    product.classList.add('active');
+    }else{
+    product.classList.remove('active');
+    product.classList.add('unactive');
+    }
+});
+}
+
+init();
+
+// end lineas functions
+
+
+/* ------------------------------------- */
+
+
+
 // render products data
 
 const renderProduct = (data, id) => {
     const html = `
         <div class="grid-container static-data" data-id"${id}">
             <img src="${data.image}" alt="">
-            <a id="product" href=""><p>${data.title}</p></a>
+            <ul class="description-links">
+                <li><a href="">${data.title}</a></li>
+                <li class="accordion" id="click"><a href="#click"><i class="fas fa-info-circle"></i> Info</a>
+                  <p class="info-display">${data.info}</p>
+                </li>
+                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
         </div>
     `;
     categories.innerHTML += html;
@@ -95,11 +156,45 @@ function resetProducts(){
 
 const renderSearch = (data) => {
     const html = `
-        <div class="grid-container static-data">
+        <div class="grid-container static-data" data-id"${id}>
             <img class="animateRight" src="${data.image}" alt="">
-            <a id="product" href=""><p class="animateRight">${data.description}</p></a>
+            <ul class="description-links">
+                <li><a href="">${data.title}</a></li>
+                <li class="accordion" id="click"><a href="#click"><i class="fas fa-info-circle"></i> Info</a>
+                  <p class="info-display">${data.info}</p>
+                </li>
+                <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+            </ul>
         </div>
     `;
 
     categories.innerHTML += html;
 };
+
+// accordion functions display info products
+
+function accordion() {
+const accordions = document.querySelectorAll('.products .grid-categories .grid-container .description-links');
+
+accordions.forEach(accordion => {
+    accordion.addEventListener('click', e => {
+        const infoText = e.target.nextElementSibling.className;
+        const divInfo = e.target.nextElementSibling;
+        if(infoText === 'info-display' || infoText === 'info-display the_dropdown'){
+            e.preventDefault();
+            divInfo.classList.toggle('the_dropdown');
+    }
+    });
+});
+
+/*accor.addEventListener('click', e => {
+    
+});*/
+}
+
+
+
+
+
+setTimeout(accordion, 5000);
+

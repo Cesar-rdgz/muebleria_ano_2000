@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* --- fonts --- */
 
@@ -238,6 +239,7 @@ header .contact-container a .lil-icons{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
 }
 
 .brands .brands-logo img{
@@ -314,10 +316,62 @@ header .contact-container a .lil-icons{
     justify-content: center;
     flex-direction: column;
     color: #fff;
+    row-gap: 3rem;
 }
+
+
+/* --- buttons category --- */
+
+.categories .introduction .lista-categorias {
+    text-align: center;
+}
+
+.categories .introduction .button-group button{
+    background: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1rem;
+    font-family: 'Asap', sans-serif;
+    margin: .3rem;
+    border-radius: 12px;
+    transition: all .4s ease;
+    color: var(--complementary-color);
+}
+
+.categories .introduction .button-group button:hover{
+    background: #000;
+    color: #fff;
+}
+
+.categories .introduction .button-group button + button{
+    padding-left: 1rem;
+}
+
+button:focus,
+button:active
+button:hover
+.btn:active,
+.btn.active{
+	outline: 0px !important;
+	box-shadow: none !important;
+}
+
+.categories .grid-categories > .unactive {
+    display: none;
+}
+
+.categories .grid-categories > .active {
+    display: block;
+}
+
+/* --- buttons category --- */
+
+
 
 .categories .grid-categories img{
     width: 100%;
+    height: 100%;
 }
 
 .categories .grid-categories .grid-container{
@@ -327,7 +381,7 @@ header .contact-container a .lil-icons{
 
 .categories .grid-categories .grid-container p{
     position: absolute;
-    bottom: 0;
+    top: 100%;
     padding: .5rem 0;
     background: #fff;
     width: 100%;
@@ -351,8 +405,12 @@ header .contact-container a .lil-icons{
 .products{
     position: relative;
     top: 15rem;
-    padding: 4rem 2rem;
+    padding: 4rem 2rem 17rem 2rem;
     width: 100%;
+}
+
+.products.aside-page{
+    margin-top: -5rem;
 }
 
 .products .introduction h3{
@@ -375,35 +433,78 @@ header .contact-container a .lil-icons{
     justify-content: center;
     flex-direction: column;
     color: #fff;
-    overflow: hidden;
 }
 
 .products .grid-categories img{
     width: 100%;
+    height: 100%;
 }
 
 .products .grid-categories .grid-container{
     position: relative;
-    margin: .8rem 0;
+    top: 0;
+    left: 0;
 }
 
-.products .grid-categories .grid-container p{
+
+.products .grid-categories .grid-container i{
+    font-size: 1.5rem;
+}
+
+.grid-categories.real-time-content.content-product {
+    row-gap: 9.5rem;
+}
+
+.grid-categories.real-time-content.content-product .grid-container.static-data{
+    margin-bottom: 5rem;
+}
+
+.grid-categories.real-time-content.content-product .no-result p{
+    color: var(--complementary-color);
+    font-size: 3.5rem;
+    font-family: 'Lobster', cursive;
+}
+
+.products .grid-categories .grid-container.static-data > img{
+    margin-bottom: 2.8rem;
+}
+
+.products .grid-categories .grid-container .description-links{
     position: absolute;
-    bottom: 0;
-    padding: .8rem 0;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
     background: #fff;
     width: 100%;
-    color: var(--complementary-color);
+    list-style: none;
     text-align: center;
-    font-weight: 900;
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: all .5s;
+    font-family: 'Asap', sans-serif;
+    font-size: 1.1rem;
 }
 
-.products .grid-categories .grid-container p:hover{
+.products .grid-categories .grid-container .description-links .info-display{
+    color: #000;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+}
+
+.products .grid-categories .grid-container .description-links .the_dropdown{
+    max-height: 100% !important;
+}
+
+.products .grid-categories .grid-container .description-links li a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;   
+    transition: all .2s ease;
     background: var(--complementary-color);
     color: #fff;
+}
+
+.products .grid-categories .grid-container .description-links li a:hover {
+    color: var(--complementary-color);
+    background: white;
 }
 
 #search-field {
@@ -580,6 +681,18 @@ footer .footer-info span i {
 
 
 /* --- media query --- */
+@media(min-width:320px){
+    .products .grid-categories{
+        row-gap: 12rem;
+        padding-bottom: 3rem;
+    }
+
+    .grid-categories.real-time-content.content-product {
+        row-gap: 12rem;
+    }
+}
+
+
 
 @media(min-width:576px) {
     header .logo img{
@@ -628,6 +741,8 @@ footer .footer-info span i {
         flex-direction: row;
         justify-content: space-around;
         flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
     }
 
     .categories .grid-categories .grid-container{
@@ -689,6 +804,10 @@ footer .footer-info span i {
 
     .brands .brands-logo .second {
         display: block;
+    }
+
+    .brands .brands-logo img{
+        width: 10%;
     }
 
     .main-content{
