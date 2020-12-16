@@ -1,3 +1,17 @@
+<?php 
+
+function display_search(){
+  if(isset($_GET['category'])){
+    $search_query = $_GET['category'];
+
+    echo "<input id='search_value' name='search' placeholder='Buscar' type='text' value='{$search_query}'>";
+  }else {
+    echo "<input id='search_value' name='search' placeholder='Buscar' type='text'>";
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +69,7 @@
       <form id="search-field">
           <div class="input-group">
               <label for="product">Se generico, por ejemplo: Recamaras, electrodomésticos, salas.</label><br/>
-              <input id="search_value" name="search" placeholder="Buscar" type="text">
+              <?php display_search(); ?>
           </div>
           <div class="input-group">
               <input id="btn-search" type="submit" name="submit" value="Buscar">

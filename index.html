@@ -35,7 +35,7 @@
             <li><a href="#">Inicio</a></li>
             <li><a href="pages/about.html">Sobre Nosotros</a></li>
             <li><a href="pages/contact.html">Contacto</a></li>
-            <li><a href="productos.html">Productos</a></li>
+            <li><a href="productos.php">Productos</a></li>
           </ul>
         </nav>
       </div>
@@ -121,7 +121,7 @@
       <div class="grid-categories">
         <div class="grid-container animate__animated animate__fadeInDown" category="linea-blanca">
           <img src="images/products/refrigeradores.jpg" alt="">
-          <a href="productos.php?category=refrigeradores"><p>Refrigeradores</p></a>
+          <a onclick="showRefris" href="productos.php?category=mesas"><p>Refrigeradores</p></a>
         </div>
         <div class="grid-container animate__animated animate__fadeInDown" category="electrodomesticos">
           <img src="images/products/hornos-microondas.jpg" alt="">
@@ -212,7 +212,7 @@
         <h3>Algunos de nuestros productos</h3><br/>
         <p>Puedes darle un vistazo a algunos de nuestros productos, como siempre apuntamos a ofrecer los mejores productos en calidad y precio.</p><br/>
       </div>
-      <form id="search-field">
+      <form id="search-field" action="productos.html">
         <div class="input-group">
           <label for="product">Se generico, por ejemplo: Recamaras, electrodomésticos, salas.</label><br/>
           <input placeholder="Buscar" id="product" type="text">

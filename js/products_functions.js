@@ -105,7 +105,11 @@ const products = [
 
 ];
 
+setTimeout(simulateClick, 1000);
 
+function simulateClick(){
+    searchButton.click();
+}
 
 const searchForm = document.querySelector('form');
 const div = document.querySelector('.grid-categories.real-time-content.content-product')
@@ -182,5 +186,3 @@ function accordion() {
         });
     });
 }
-
-
