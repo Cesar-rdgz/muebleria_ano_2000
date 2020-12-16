@@ -196,5 +196,5 @@ accordions.forEach(accordion => {
 
 
 
-setTimeout(accordion, 5000);
+setTimeout(accordion, 8000);
 

@@ -17,4 +17,5 @@ function accordion() {
     });*/
 }
 
+
 accordion();
