@@ -198,3 +198,27 @@ accordions.forEach(accordion => {
 
 setTimeout(accordion, 8000);
 
+
+
+function redirectSearch() {
+    const element = document.querySelector('.grid-categories');
+    element.addEventListener('click', e => {
+        const querySearch = e.target.innerText;
+        const queryToLower = querySearch.toLowerCase();
+        localStorage.setItem("textvalue", queryToLower);
+        return false;
+    });
+}
+
+function redirectInput(){
+    const form = document.getElementById('search-field');
+    form.addEventListener('submit', e => {
+        const element = form.product.value;
+        localStorage.setItem("textvalue", element);
+        return false;
+    });
+}
+
+redirectSearch();
+
+redirectInput();

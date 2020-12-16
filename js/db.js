@@ -27,7 +27,7 @@ db.collection('forniture').onSnapshot((snapshot) => {
     });
 });
 
-const searchField = document.querySelector('#search-field');
+/*const searchField = document.querySelector('#search-field');
 searchField.addEventListener('submit', e => {
     e.preventDefault();
     let searchQuery = searchField.product.value.toLowerCase();
@@ -42,4 +42,4 @@ function preparingRenderSearch(data) {
             renderSearch(doc.data());
         });
     });
-}
+}*/

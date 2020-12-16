@@ -397,6 +397,10 @@ button:hover
     color: #fff;
 }
 
+.grid-categories.real-time-content.content-product{
+    overflow: hidden;
+}
+
 
 /* --- categories --- */
 
