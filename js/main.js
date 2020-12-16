@@ -212,9 +212,10 @@ function redirectSearch() {
 
 function redirectInput(){
     const form = document.getElementById('search-field');
-    form.addEventListener('submit', e => {
+    form.addEventListener('keyup', e => {
         const element = form.product.value;
-        localStorage.setItem("textvalue", element);
+        const queryToLower = element.toLowerCase();
+        localStorage.setItem("textvalue", queryToLower);
         return false;
     });
 }
