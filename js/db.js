@@ -26,20 +26,3 @@ db.collection('forniture').onSnapshot((snapshot) => {
         }
     });
 });
-
-/*const searchField = document.querySelector('#search-field');
-searchField.addEventListener('submit', e => {
-    e.preventDefault();
-    let searchQuery = searchField.product.value.toLowerCase();
-    preparingRenderSearch(searchQuery);
-    searchField.product.value = '';
-});
-
-function preparingRenderSearch(data) {
-    resetProducts();
-    db.collection('forniture').where('title', '==', data).get().then((snapshot) =>{
-        snapshot.docs.forEach(doc => {
-            renderSearch(doc.data());
-        });
-    });
-}*/

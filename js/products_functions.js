@@ -441,7 +441,7 @@ function displaySearch(title, info, image) {
             <li class="accordion" id="click"><a href="#click"><i class="fas fa-info-circle"></i> Info</a>
                 <p class="info-display">${info}</p>
             </li>
-            <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href="https://wa.me/524371026787?text=Hola%20me%20puedes%20dar%20más%20información%20sobre%20esto%20${title}"><i class="fab fa-whatsapp"></i></a></li>
             </ul>
         </div>
         `;
