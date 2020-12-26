@@ -381,7 +381,7 @@ button:hover
 
 .categories .grid-categories .grid-container p{
     position: absolute;
-    top: 100%;
+    top: 97%;
     padding: .5rem 0;
     background: #fff;
     width: 100%;
@@ -414,7 +414,8 @@ button:hover
 }
 
 .products.aside-page{
-    margin-top: -5rem;
+    padding-top: -5rem;
+    padding-bottom: 0;
 }
 
 .products .introduction h3{
@@ -459,6 +460,11 @@ button:hover
     row-gap: 9.5rem;
 }
 
+.products.aside-page .grid-categories.real-time-content.content-product {
+    padding-bottom: 150px;
+}
+
+
 .grid-categories.real-time-content.content-product .grid-container.static-data{
     margin-bottom: 5rem;
 }
@@ -469,13 +475,17 @@ button:hover
     font-family: 'Lobster', cursive;
 }
 
+.products .grid-categories .grid-container.static-data{
+    margin-bottom: 3rem;
+}
+
 .products .grid-categories .grid-container.static-data > img{
     margin-bottom: 2.8rem;
 }
 
 .products .grid-categories .grid-container .description-links{
     position: absolute;
-    top: 100%;
+    top: 80%;
     display: flex;
     flex-direction: column;
     background: #fff;
