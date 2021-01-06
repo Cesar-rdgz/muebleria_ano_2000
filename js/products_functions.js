@@ -95,6 +95,22 @@ const products = [
         wordsThree: 'hisense'
     },
     {
+        image: 'congelador-mabe.jpg',
+        title: 'Congelador Mabe',
+        info: 'CAPACIDAD: 7 Pies</br>LLAVE DE SEGURIDAD: SI</br>FUNCIONES: CONGELA</br>Voltaje: 115V 60HZ',
+        words: 'congeladores',
+        wordsTwo: 'congelador',
+        wordsThree: 'mabe'
+    },
+    {
+        image: 'hens_conge.jpg',
+        title: 'Congelador Hisense 7p',
+        info: 'CAPACIDAD: 7 Pies</br>LLAVE DE SEGURIDAD: SI</br>FUNCIONES: CONGELA|Enfria</br>Voltaje: 115V 60HZ</br>Canastas plasticas: 1.',
+        words: 'congeladores',
+        wordsTwo: 'congelador',
+        wordsThree: 'hisense'
+    },
+    {
         image: 'daewoo.jpg',
         title: 'Refrigerador Daewoo',
         info: 'CAPACIDAD: 11 PIES</br>CONTROL DE TEMPERATURA:	MECÁNICO</br>LLAVE DE SEGURIDAD: SI</br>JALADERAS: VERTICAL</br>',
@@ -359,6 +375,22 @@ const products = [
         wordsThree: 'muebles'
     },
     {
+        image: 'espejo-secretero.jpg',
+        title: 'Espejo secretero',
+        info: 'Medidas(alto x ancho x profundo)</br>185x65x75cm',
+        words: 'roperos',
+        wordsTwo: 'ropero',
+        wordsThree: 'muebles'
+    },
+    {
+        image: 'espejo-zapatero.jpg',
+        title: 'Espejo zapatero',
+        info: 'Medidas(alto x ancho x profundo)</br>182x60x75cm',
+        words: 'roperos',
+        wordsTwo: 'ropero',
+        wordsThree: 'muebles'
+    },
+    {
         image: 'plancha-decker.jpg',
         title: 'Plancha Decker',
         info: 'Potencia: 1200Watts</br>apagado automatico: no</br>Atigoteo: si</br>Vapor vertical: si.',
@@ -377,10 +409,26 @@ const products = [
     {
         image: 'batidoras.jpg',
         title: 'Batidora Kitchenaid',
-        info: 'Potencia: 325Watts</br>ACCESORIOS</br>BATIDOR GLOBO|BATIDOR PLANO|GANCHO PARA AMASAR|PROTECTOR DE VERTIDO|TAZON ACERO INOXIDABLE',
+        info: 'Potencia: 290Watts</br>ACCESORIOS</br>BATIDOR ESPECIAL|TAZON ACERO INOXIDABLE</br>Velocidades: 6',
         words: 'accesorios',
         wordsTwo: 'electrodomesticos',
         wordsThree: 'batidoras'
+    },
+    {
+        image: 'hamilton-bat.jpg',
+        title: 'Batidora Hamilton',
+        info: 'Potencia: 290Watts</br>ACCESORIOS</br>BATIDOR GLOBO|BATIDOR PLANO|GANCHO PARA AMASAR|PROTECTOR DE VERTIDO|TAZON ACERO INOXIDABLE',
+        words: 'accesorios',
+        wordsTwo: 'electrodomesticos',
+        wordsThree: 'batidoras hamilton-bat'
+    },
+    {
+        image: 'sunbeam-bat.jpg',
+        title: 'Batidora Sunbeam',
+        info: 'Potencia: 120Watts</br>ACCESORIOS:</br>BATIDOR Cromados</br>Boton de expulsion: Si.</br>Velocidades 5',
+        words: 'accesorios',
+        wordsTwo: 'electrodomesticos',
+        wordsThree: 'batidoras hamilton-bat'
     },
     {
         image: 'licuadoras.jpg',
@@ -508,3 +556,18 @@ function clearLocal(){
 }
 
 setTimeout(clearLocal, 1500);
+
+
+/********started *********/
+
+function initItems() {
+    products.filter((product) => {
+            
+        const productTitle = product.title;
+        const productInfo = product.info;
+        const productImage = product.image;
+        displaySearch(productTitle, productInfo, productImage);
+    });
+}
+
+initItems();
